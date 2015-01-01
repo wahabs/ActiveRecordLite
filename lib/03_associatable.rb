@@ -69,6 +69,7 @@ module Associatable
         options.primary_key => self.send(options.foreign_key)
       ).first
     end
+    @assoc_options = { name => options }
     # Human where(:id => 3) where 3 is the owner_id given by the cat
   end
 
@@ -79,11 +80,12 @@ module Associatable
       options.foreign_key => self.send(options.primary_key)
       )
     end
+    @assoc_options = { name => options }
     # Cats where(:owner_id => 3) where 3 is the id given by the human
   end
 
   def assoc_options
-    # Wait to implement this in Phase IVa. Modify `belongs_to`, too.
+    @assoc_options ||= {}
   end
 end
 
