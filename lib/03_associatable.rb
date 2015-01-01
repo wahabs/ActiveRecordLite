@@ -1,7 +1,6 @@
 require_relative '02_searchable'
 require 'active_support/inflector'
 
-# Phase IIIa
 class AssocOptions
   attr_accessor(
     :foreign_key,
@@ -70,7 +69,7 @@ module Associatable
       ).first
     end
     @assoc_options = { name => options }
-    # Human where(:id => 3) where 3 is the owner_id given by the cat
+    # e.g. Human where(:id => 3) where 3 is the owner_id given by the cat
   end
 
   def has_many(name, options = {})
@@ -81,7 +80,7 @@ module Associatable
       )
     end
     @assoc_options = { name => options }
-    # Cats where(:owner_id => 3) where 3 is the id given by the human
+    # e.g. Cats where(:owner_id => 3) where 3 is the id given by the human
   end
 
   def assoc_options
