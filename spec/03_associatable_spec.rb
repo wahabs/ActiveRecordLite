@@ -143,6 +143,7 @@ describe 'Associatable' do
     end
 
     it 'fetches `humans` from `House`' do
+
       expect(ned_house).to respond_to(:humans)
       humans = ned_house.humans
 
