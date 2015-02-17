@@ -1,3 +1,5 @@
+# This class for demonstration purposes only
+
 class AttrAccessorObject
   def self.my_attr_accessor(*names)
     names.each do |name|

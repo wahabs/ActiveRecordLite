@@ -29,7 +29,6 @@ module Associatable
       SQL
 
       column = DBConnection.execute(query, self.send(through_foreign_key))
-
       source_options.model_class.parse_all(column).first
     end
 
