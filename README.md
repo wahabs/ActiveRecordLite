@@ -29,4 +29,4 @@ second. The `has_one_through(name, through_name, source_name)` method defines th
 `Cat#has_one_through(:home, :human, :house)`.
 
 ### SQL Object
-Defines an the results of a SQL query as an abstracted Ruby object. Extends Searchable and Associatable.
+Defines the results of a SQL query as an abstracted Ruby object. Extends Searchable and Associatable.
