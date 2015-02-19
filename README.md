@@ -9,16 +9,16 @@ customized MVC framework.
 
 ## Classes
 
-### DB Connection
+### [DB Connection][db-connection]
 For testing purposes. Defines a local database connection via the `sqlite3` gem, and
 uses the sample database `cats.db`.
 
-### Searchable
+### [Searchable][searchable]
 Given some results of a database query, Searchable defines a method `where`
 that takes in a `params` hash and returns the columns of the query results
 for which the query rows and columns match the `params` keys and values.
 
-### Associatable
+### [Associatable][associatable]
 Given some results of a database query, Associatable defines the following methods:
 
 * `belongs_to`: Takes in a `name` for a new association and an options hash. Maps the calling
@@ -31,5 +31,11 @@ another model, we can say that the last model has an association to the first mo
 second. The `has_one_through(name, through_name, source_name)` method defines the appropriate method for this association. For example, if a `Human` belongs to a `House`, we can define the method
 `Cat#has_one_through(:home, :human, :house)`.
 
-### SQL Object
+### [SQL Object][sql-object]
 Defines the results of a SQL query as an abstracted Ruby object. Extends Searchable and Associatable.
+
+
+[db-connection]: ./lib/db_connection.rb
+[searchable]: ./lib/searchable.rb
+[associatable]: ./lib/associatable.rb
+[sql-object]: ./lib/sql_object.rb
