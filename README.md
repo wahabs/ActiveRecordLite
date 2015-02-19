@@ -4,7 +4,7 @@ Caboose is a simple Object Relational Mapping system, based on [Active Record fo
 Active Record functions such as `has_many`, `belongs_to`, `has_one :through`,
 and others.
 
-Primarily intended to be utilized with [Metro,](https://github.com/wahabs/Caboose) a
+Primarily intended to be utilized with [Metro,](https://github.com/wahabs/Metro) a
 customized MVC framework.
 
 ## Classes
