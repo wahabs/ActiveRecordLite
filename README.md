@@ -23,9 +23,9 @@ Given some results of a database query, Associatable defines the following metho
 
 * `belongs_to`: Takes in a `name` for a new association and an options hash. Maps the calling
 table's foreign key column to the associated table's primary key column via a method of the same
-name. For example, if a `Cat` class `belongs_to` a `Human` class with the association named `owner`, we can call `myCat.owner`.
+name. For example, if a `Cat` model `belongs_to` a `Human` model with the association named `owner`, we can call `Cat#owner`.
 * `has_many`: Sets up the reciprocal relation to `belongs_to`, such that a method is defined on
-the calling table which returns all rows in the associated table with a foreign key mapping to the caller's primary key. Hence, we may call `myHuman.cats`.
+the calling table which returns all rows in the associated table with a foreign key mapping to the caller's primary key. Hence, we may call `Human#cats`.
 * `has_one_through`: Given that a model `belongs_to` another model and the latter `belongs_to` yet
 another model, we can say that the last model has an association to the first model through the
 second. The `has_one_through(name, through_name, source_name)` method defines the appropriate method for this association. For example, if a `Human` belongs to a `House`, we can define the method
